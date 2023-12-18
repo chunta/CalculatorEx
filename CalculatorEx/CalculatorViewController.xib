@@ -11,7 +11,29 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorViewController" customModule="CalculatorEx" customModuleProvider="target">
             <connections>
+                <outlet property="allCleanButton" destination="9nM-F9-kgY" id="UCj-ic-eYL"/>
+                <outlet property="assistantLabel" destination="T0R-MO-boH" id="s7R-qQ-aMU"/>
+                <outlet property="divideButton" destination="aEX-E4-hT5" id="TgH-JN-Zkj"/>
+                <outlet property="dotButton" destination="gDA-vT-nhP" id="PS3-jl-GlY"/>
+                <outlet property="eightButton" destination="VCF-6I-Nbm" id="yrS-AW-iNz"/>
+                <outlet property="equalButton" destination="bxo-8h-iUn" id="Mra-Fb-veO"/>
+                <outlet property="fiveButton" destination="73p-K4-rOT" id="6q6-Vy-yu1"/>
+                <outlet property="fourButton" destination="pRf-m4-CYf" id="c6q-lM-o0T"/>
+                <outlet property="inputSequenceLabel" destination="NZx-jy-oXG" id="3HK-Oy-VmZ"/>
+                <outlet property="mainDisplayLabel" destination="iXT-nr-4hN" id="U36-6c-1EQ"/>
+                <outlet property="minusButton" destination="oMO-7B-aWA" id="Ta3-pn-Fcr"/>
+                <outlet property="multiplyButton" destination="EoA-rb-RPK" id="zUC-LX-Bvf"/>
+                <outlet property="negativeButton" destination="xjE-nr-bcH" id="1zo-nQ-0A3"/>
+                <outlet property="nineButton" destination="olI-d7-627" id="UxG-dc-DKh"/>
+                <outlet property="oneButton" destination="cDD-Ou-PWz" id="2HC-IP-3nT"/>
+                <outlet property="percentageButton" destination="ANr-g7-7ES" id="Ok2-dX-CQm"/>
+                <outlet property="plusButton" destination="Hes-g9-saI" id="o4o-8F-94a"/>
+                <outlet property="sevenButton" destination="Ew5-h0-Lsh" id="NGl-I2-KWx"/>
+                <outlet property="sixButton" destination="f9h-az-KLF" id="8aR-ok-reM"/>
+                <outlet property="threeButton" destination="bPL-8k-Jwa" id="dp0-LR-m39"/>
+                <outlet property="twoButton" destination="eIo-pX-gKH" id="f8s-cb-OmU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="zeroButton" destination="WHa-33-qNb" id="Txs-WS-WTv"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -19,50 +41,529 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="661" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="n2v-Q5-3Sr">
-                    <rect key="frame" x="334" y="58.999999999999993" width="39" height="27.666666666666664"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1335" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mTB-wG-zwp">
-                    <rect key="frame" x="289.66666666666669" y="96.666666666666671" width="83.333333333333314" height="44.333333333333329"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="89x15=1335" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpd-Rq-h1U">
-                    <rect key="frame" x="20" y="146" width="353" height="25.333333333333343"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zxs-Gm-Q18">
-                    <rect key="frame" x="20" y="181.33333333333331" width="353" height="616.66666666666674"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2q-BT-r9m" userLabel="LabelView">
+                    <rect key="frame" x="20" y="58.999999999999986" width="353" height="247.66666666666663"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5eI-67-7lC" userLabel="AssistantView">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="54.666666666666664"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="T0R-MO-boH">
+                                    <rect key="frame" x="0.0" y="8" width="345" height="46.666666666666664"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="T0R-MO-boH" secondAttribute="bottom" id="2pI-46-Zwg"/>
+                                <constraint firstItem="T0R-MO-boH" firstAttribute="top" secondItem="5eI-67-7lC" secondAttribute="top" constant="8" id="t2q-ze-0aJ"/>
+                                <constraint firstItem="T0R-MO-boH" firstAttribute="leading" secondItem="5eI-67-7lC" secondAttribute="leading" id="toh-PC-wFQ"/>
+                                <constraint firstAttribute="trailing" secondItem="T0R-MO-boH" secondAttribute="trailing" constant="8" id="uFq-Wy-rad"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaF-HL-Jhe" userLabel="MainView">
+                            <rect key="frame" x="0.0" y="54.666666666666664" width="353" height="123.66666666666669"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="iXT-nr-4hN">
+                                    <rect key="frame" x="8" y="8" width="337" height="107.66666666666667"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="76"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="iXT-nr-4hN" secondAttribute="trailing" constant="8" id="KYW-PZ-ymb"/>
+                                <constraint firstAttribute="bottom" secondItem="iXT-nr-4hN" secondAttribute="bottom" constant="8" id="Umx-8B-7nF"/>
+                                <constraint firstItem="iXT-nr-4hN" firstAttribute="top" secondItem="zaF-HL-Jhe" secondAttribute="top" constant="8" id="Zfb-a1-4m0"/>
+                                <constraint firstItem="iXT-nr-4hN" firstAttribute="leading" secondItem="zaF-HL-Jhe" secondAttribute="leading" constant="8" id="rG3-8o-Vf1"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gd-Hj-1Ll" userLabel="InputView">
+                            <rect key="frame" x="0.0" y="178.33333333333334" width="353" height="69.333333333333343"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.34999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="NZx-jy-oXG">
+                                    <rect key="frame" x="8" y="0.0" width="337" height="69.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="NZx-jy-oXG" secondAttribute="bottom" id="E9J-En-VoB"/>
+                                <constraint firstItem="NZx-jy-oXG" firstAttribute="leading" secondItem="5gd-Hj-1Ll" secondAttribute="leading" constant="8" id="aN1-wh-b2S"/>
+                                <constraint firstItem="NZx-jy-oXG" firstAttribute="top" secondItem="5gd-Hj-1Ll" secondAttribute="top" id="kaU-vf-Co1"/>
+                                <constraint firstAttribute="trailing" secondItem="NZx-jy-oXG" secondAttribute="trailing" constant="8" id="veY-nk-t1b"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="zaF-HL-Jhe" firstAttribute="top" secondItem="5eI-67-7lC" secondAttribute="bottom" id="3Bt-FH-msF"/>
+                        <constraint firstItem="5gd-Hj-1Ll" firstAttribute="leading" secondItem="M2q-BT-r9m" secondAttribute="leading" id="88t-uZ-7aP"/>
+                        <constraint firstItem="5eI-67-7lC" firstAttribute="height" secondItem="M2q-BT-r9m" secondAttribute="height" multiplier="0.22" id="9lN-EZ-24W"/>
+                        <constraint firstItem="5gd-Hj-1Ll" firstAttribute="top" secondItem="zaF-HL-Jhe" secondAttribute="bottom" id="HL0-Nu-djh"/>
+                        <constraint firstAttribute="bottom" secondItem="5gd-Hj-1Ll" secondAttribute="bottom" constant="5.6843418860808015e-14" id="JFV-Vm-EK0"/>
+                        <constraint firstItem="zaF-HL-Jhe" firstAttribute="leading" secondItem="M2q-BT-r9m" secondAttribute="leading" id="cUh-jw-aCT"/>
+                        <constraint firstAttribute="trailing" secondItem="5eI-67-7lC" secondAttribute="trailing" id="dcj-xa-DzP"/>
+                        <constraint firstAttribute="trailing" secondItem="5gd-Hj-1Ll" secondAttribute="trailing" id="hJh-k2-gMu"/>
+                        <constraint firstItem="5eI-67-7lC" firstAttribute="top" secondItem="M2q-BT-r9m" secondAttribute="top" id="lQe-mU-g6K"/>
+                        <constraint firstAttribute="trailing" secondItem="zaF-HL-Jhe" secondAttribute="trailing" id="mAP-vf-cgM"/>
+                        <constraint firstItem="5eI-67-7lC" firstAttribute="leading" secondItem="M2q-BT-r9m" secondAttribute="leading" id="mjj-nB-sSH"/>
+                        <constraint firstItem="zaF-HL-Jhe" firstAttribute="height" secondItem="M2q-BT-r9m" secondAttribute="height" multiplier="0.5" id="tbl-8l-39r"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zxs-Gm-Q18" userLabel="ButtonView">
+                    <rect key="frame" x="20" y="306.66666666666674" width="353" height="511.33333333333326"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bk7-o6-s5z" userLabel="Row00">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="102.33333333333333"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nM-F9-kgY" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="102.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="AC">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchOperator:" destination="-1" eventType="touchUpInside" id="7IZ-d8-SNp"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjE-nr-bcH" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="88.333333333333343" y="0.0" width="88.333333333333343" height="102.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="±">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchOperator:" destination="-1" eventType="touchUpInside" id="WGc-B2-3Oi"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANr-g7-7ES" userLabel="%" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="176.66666666666666" y="0.0" width="87.999999999999972" height="102.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="﹪">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchOperator:" destination="-1" eventType="touchUpInside" id="PqR-d0-uEU"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEX-E4-hT5" userLabel="/" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="264.66666666666669" y="0.0" width="88.333333333333314" height="102.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="÷">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" systemColor="systemOrangeColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchOperator:" destination="-1" eventType="touchUpInside" id="sRd-7H-pb7"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="aEX-E4-hT5" firstAttribute="centerY" secondItem="bk7-o6-s5z" secondAttribute="centerY" id="6gw-Sd-LvT"/>
+                                <constraint firstItem="xjE-nr-bcH" firstAttribute="height" secondItem="bk7-o6-s5z" secondAttribute="height" id="Di9-kw-Tem"/>
+                                <constraint firstItem="ANr-g7-7ES" firstAttribute="width" secondItem="bk7-o6-s5z" secondAttribute="width" multiplier="0.25" id="JKc-4O-cdq"/>
+                                <constraint firstItem="xjE-nr-bcH" firstAttribute="centerY" secondItem="bk7-o6-s5z" secondAttribute="centerY" id="KRc-gf-6NK"/>
+                                <constraint firstItem="9nM-F9-kgY" firstAttribute="width" secondItem="bk7-o6-s5z" secondAttribute="width" multiplier="0.25" id="Knw-Ah-aH2"/>
+                                <constraint firstItem="ANr-g7-7ES" firstAttribute="leading" secondItem="xjE-nr-bcH" secondAttribute="trailing" id="NOF-jR-fyS"/>
+                                <constraint firstItem="xjE-nr-bcH" firstAttribute="leading" secondItem="9nM-F9-kgY" secondAttribute="trailing" id="OOc-Na-TUS"/>
+                                <constraint firstItem="ANr-g7-7ES" firstAttribute="centerY" secondItem="bk7-o6-s5z" secondAttribute="centerY" id="SVa-yU-bLu"/>
+                                <constraint firstItem="xjE-nr-bcH" firstAttribute="width" secondItem="bk7-o6-s5z" secondAttribute="width" multiplier="0.25" id="TEL-Ig-3ma"/>
+                                <constraint firstItem="9nM-F9-kgY" firstAttribute="leading" secondItem="bk7-o6-s5z" secondAttribute="leading" id="TMa-EP-5W5"/>
+                                <constraint firstItem="aEX-E4-hT5" firstAttribute="leading" secondItem="ANr-g7-7ES" secondAttribute="trailing" id="U38-hp-a4U"/>
+                                <constraint firstItem="9nM-F9-kgY" firstAttribute="centerY" secondItem="bk7-o6-s5z" secondAttribute="centerY" id="VhJ-7x-bfU"/>
+                                <constraint firstItem="9nM-F9-kgY" firstAttribute="height" secondItem="bk7-o6-s5z" secondAttribute="height" id="c3g-OU-4Js"/>
+                                <constraint firstItem="aEX-E4-hT5" firstAttribute="width" secondItem="bk7-o6-s5z" secondAttribute="width" multiplier="0.25" id="kIk-0g-xZ8"/>
+                                <constraint firstItem="ANr-g7-7ES" firstAttribute="height" secondItem="bk7-o6-s5z" secondAttribute="height" id="prj-Hp-LKw"/>
+                                <constraint firstItem="aEX-E4-hT5" firstAttribute="height" secondItem="bk7-o6-s5z" secondAttribute="height" id="wz1-SN-SIt"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7M-PC-z37" userLabel="Row01">
+                            <rect key="frame" x="0.0" y="102.33333333333331" width="353" height="102.33333333333331"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ew5-h0-Lsh" userLabel="7" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="102.33333333333333"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="7">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchDigit:" destination="-1" eventType="touchUpInside" id="q8c-q0-B7S"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCF-6I-Nbm" userLabel="8" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="88.333333333333343" y="0.0" width="88.333333333333343" height="102.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="8">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchDigit:" destination="-1" eventType="touchUpInside" id="uco-4q-USq"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olI-d7-627" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="176.66666666666666" y="0.0" width="87.999999999999972" height="102.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="9">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchDigit:" destination="-1" eventType="touchUpInside" id="YyC-Yy-huz"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EoA-rb-RPK" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="264.66666666666669" y="0.0" width="88.333333333333314" height="102.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="×">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" systemColor="systemOrangeColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchOperator:" destination="-1" eventType="touchUpInside" id="6jm-rF-7es"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="VCF-6I-Nbm" firstAttribute="leading" secondItem="Ew5-h0-Lsh" secondAttribute="trailing" id="2Du-Fb-Yba"/>
+                                <constraint firstItem="VCF-6I-Nbm" firstAttribute="centerY" secondItem="b7M-PC-z37" secondAttribute="centerY" id="DRf-HK-Rja"/>
+                                <constraint firstItem="olI-d7-627" firstAttribute="height" secondItem="b7M-PC-z37" secondAttribute="height" id="Dq7-J8-bv2"/>
+                                <constraint firstItem="olI-d7-627" firstAttribute="centerY" secondItem="b7M-PC-z37" secondAttribute="centerY" id="GCb-uJ-ZJS"/>
+                                <constraint firstItem="EoA-rb-RPK" firstAttribute="height" secondItem="b7M-PC-z37" secondAttribute="height" id="HBB-Nq-Pu5"/>
+                                <constraint firstItem="EoA-rb-RPK" firstAttribute="centerY" secondItem="b7M-PC-z37" secondAttribute="centerY" id="NBC-D1-rWB"/>
+                                <constraint firstItem="Ew5-h0-Lsh" firstAttribute="leading" secondItem="b7M-PC-z37" secondAttribute="leading" id="QK6-G0-biu"/>
+                                <constraint firstItem="EoA-rb-RPK" firstAttribute="width" secondItem="b7M-PC-z37" secondAttribute="width" multiplier="0.25" id="Rxk-d0-xYW"/>
+                                <constraint firstItem="olI-d7-627" firstAttribute="width" secondItem="b7M-PC-z37" secondAttribute="width" multiplier="0.25" id="Tet-qx-egT"/>
+                                <constraint firstItem="Ew5-h0-Lsh" firstAttribute="centerY" secondItem="b7M-PC-z37" secondAttribute="centerY" id="VgE-w4-JRc"/>
+                                <constraint firstItem="Ew5-h0-Lsh" firstAttribute="width" secondItem="b7M-PC-z37" secondAttribute="width" multiplier="0.25" id="ep9-Fv-DrB"/>
+                                <constraint firstItem="Ew5-h0-Lsh" firstAttribute="height" secondItem="b7M-PC-z37" secondAttribute="height" id="m0T-gz-sKc"/>
+                                <constraint firstItem="VCF-6I-Nbm" firstAttribute="height" secondItem="b7M-PC-z37" secondAttribute="height" id="mzf-gM-WVF"/>
+                                <constraint firstItem="VCF-6I-Nbm" firstAttribute="width" secondItem="b7M-PC-z37" secondAttribute="width" multiplier="0.25" id="oft-st-lZf"/>
+                                <constraint firstItem="EoA-rb-RPK" firstAttribute="leading" secondItem="olI-d7-627" secondAttribute="trailing" id="q7o-DN-9jc"/>
+                                <constraint firstItem="olI-d7-627" firstAttribute="leading" secondItem="VCF-6I-Nbm" secondAttribute="trailing" id="wAK-uZ-J0S"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtA-ml-nKb" userLabel="Row02">
+                            <rect key="frame" x="0.0" y="204.66666666666663" width="353" height="102.33333333333331"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRf-m4-CYf" userLabel="4" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="102.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="4">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchDigit:" destination="-1" eventType="touchUpInside" id="CoD-MX-V6b"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73p-K4-rOT" userLabel="5" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="88.333333333333343" y="0.0" width="88.333333333333343" height="102.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="5">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchDigit:" destination="-1" eventType="touchUpInside" id="hON-te-wUL"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9h-az-KLF" userLabel="6" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="176.66666666666666" y="0.0" width="87.999999999999972" height="102.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="6">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchDigit:" destination="-1" eventType="touchUpInside" id="3FQ-q0-QMZ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMO-7B-aWA" userLabel="-" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="264.66666666666669" y="0.0" width="88.333333333333314" height="102.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="﹣">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" systemColor="systemOrangeColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchOperator:" destination="-1" eventType="touchUpInside" id="MMI-b4-Ed8"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="f9h-az-KLF" firstAttribute="height" secondItem="qtA-ml-nKb" secondAttribute="height" id="0R9-BE-LEY"/>
+                                <constraint firstItem="pRf-m4-CYf" firstAttribute="centerY" secondItem="qtA-ml-nKb" secondAttribute="centerY" id="41O-Mr-k4z"/>
+                                <constraint firstItem="f9h-az-KLF" firstAttribute="centerY" secondItem="qtA-ml-nKb" secondAttribute="centerY" id="8SX-Wj-Gh0"/>
+                                <constraint firstItem="oMO-7B-aWA" firstAttribute="leading" secondItem="f9h-az-KLF" secondAttribute="trailing" id="MYO-Fj-QnN"/>
+                                <constraint firstItem="f9h-az-KLF" firstAttribute="leading" secondItem="73p-K4-rOT" secondAttribute="trailing" id="NPn-Qc-PDC"/>
+                                <constraint firstItem="oMO-7B-aWA" firstAttribute="centerY" secondItem="qtA-ml-nKb" secondAttribute="centerY" id="SBM-6r-6CT"/>
+                                <constraint firstItem="oMO-7B-aWA" firstAttribute="width" secondItem="qtA-ml-nKb" secondAttribute="width" multiplier="0.25" id="SDa-7M-z5Z"/>
+                                <constraint firstItem="f9h-az-KLF" firstAttribute="width" secondItem="qtA-ml-nKb" secondAttribute="width" multiplier="0.25" id="VvZ-1b-gOw"/>
+                                <constraint firstItem="oMO-7B-aWA" firstAttribute="height" secondItem="qtA-ml-nKb" secondAttribute="height" id="aCN-Wu-GB9"/>
+                                <constraint firstItem="73p-K4-rOT" firstAttribute="width" secondItem="qtA-ml-nKb" secondAttribute="width" multiplier="0.25" id="hnT-cI-9yD"/>
+                                <constraint firstItem="73p-K4-rOT" firstAttribute="height" secondItem="qtA-ml-nKb" secondAttribute="height" id="n0O-H0-6TJ"/>
+                                <constraint firstItem="73p-K4-rOT" firstAttribute="centerY" secondItem="qtA-ml-nKb" secondAttribute="centerY" id="qvL-Xb-kEl"/>
+                                <constraint firstItem="73p-K4-rOT" firstAttribute="leading" secondItem="pRf-m4-CYf" secondAttribute="trailing" id="tSL-H8-c74"/>
+                                <constraint firstItem="pRf-m4-CYf" firstAttribute="width" secondItem="qtA-ml-nKb" secondAttribute="width" multiplier="0.25" id="tT5-0O-Odd"/>
+                                <constraint firstItem="pRf-m4-CYf" firstAttribute="height" secondItem="qtA-ml-nKb" secondAttribute="height" id="v5k-Ee-eI1"/>
+                                <constraint firstItem="pRf-m4-CYf" firstAttribute="leading" secondItem="qtA-ml-nKb" secondAttribute="leading" id="xmX-56-iPR"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7iS-S8-KtO" userLabel="Row03">
+                            <rect key="frame" x="0.0" y="306.99999999999994" width="353" height="102"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDD-Ou-PWz" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="102"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="1">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchDigit:" destination="-1" eventType="touchUpInside" id="3gq-A6-02x"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIo-pX-gKH" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="88.333333333333343" y="0.0" width="88.333333333333343" height="102"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="2">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchDigit:" destination="-1" eventType="touchUpInside" id="6St-Wg-6hQ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPL-8k-Jwa" userLabel="3" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="176.66666666666666" y="0.0" width="87.999999999999972" height="102"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="3">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchDigit:" destination="-1" eventType="touchUpInside" id="paM-8H-nQM"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hes-g9-saI" userLabel="+" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="264.66666666666669" y="0.0" width="88.333333333333314" height="102"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="＋">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" systemColor="systemOrangeColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchOperator:" destination="-1" eventType="touchUpInside" id="Jnk-Pa-hcP"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="cDD-Ou-PWz" firstAttribute="centerY" secondItem="7iS-S8-KtO" secondAttribute="centerY" id="5dr-lZ-kZk"/>
+                                <constraint firstItem="bPL-8k-Jwa" firstAttribute="centerY" secondItem="7iS-S8-KtO" secondAttribute="centerY" id="6Cn-S4-dyr"/>
+                                <constraint firstItem="cDD-Ou-PWz" firstAttribute="leading" secondItem="7iS-S8-KtO" secondAttribute="leading" id="8a3-HF-c96"/>
+                                <constraint firstItem="cDD-Ou-PWz" firstAttribute="width" secondItem="7iS-S8-KtO" secondAttribute="width" multiplier="0.25" id="BuY-Ds-ZUy"/>
+                                <constraint firstItem="Hes-g9-saI" firstAttribute="centerY" secondItem="7iS-S8-KtO" secondAttribute="centerY" id="Cxa-RV-Sg3"/>
+                                <constraint firstItem="eIo-pX-gKH" firstAttribute="height" secondItem="7iS-S8-KtO" secondAttribute="height" id="GcB-Em-1bY"/>
+                                <constraint firstItem="bPL-8k-Jwa" firstAttribute="leading" secondItem="eIo-pX-gKH" secondAttribute="trailing" id="HfF-Ob-jba"/>
+                                <constraint firstItem="bPL-8k-Jwa" firstAttribute="width" secondItem="7iS-S8-KtO" secondAttribute="width" multiplier="0.25" id="aVE-e7-kvv"/>
+                                <constraint firstItem="Hes-g9-saI" firstAttribute="height" secondItem="7iS-S8-KtO" secondAttribute="height" id="dVh-2l-HMq"/>
+                                <constraint firstItem="eIo-pX-gKH" firstAttribute="centerY" secondItem="7iS-S8-KtO" secondAttribute="centerY" id="hQS-uh-uKg"/>
+                                <constraint firstItem="Hes-g9-saI" firstAttribute="leading" secondItem="bPL-8k-Jwa" secondAttribute="trailing" id="kDV-8G-KAd"/>
+                                <constraint firstItem="Hes-g9-saI" firstAttribute="width" secondItem="7iS-S8-KtO" secondAttribute="width" multiplier="0.25" id="m0d-Oh-Ksr"/>
+                                <constraint firstItem="cDD-Ou-PWz" firstAttribute="height" secondItem="7iS-S8-KtO" secondAttribute="height" id="mHN-2u-Gff"/>
+                                <constraint firstItem="bPL-8k-Jwa" firstAttribute="height" secondItem="7iS-S8-KtO" secondAttribute="height" id="mTY-oF-Ud2"/>
+                                <constraint firstItem="eIo-pX-gKH" firstAttribute="width" secondItem="7iS-S8-KtO" secondAttribute="width" multiplier="0.25" id="oQz-F4-YiH"/>
+                                <constraint firstItem="eIo-pX-gKH" firstAttribute="leading" secondItem="cDD-Ou-PWz" secondAttribute="trailing" id="xsr-lF-NLl"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="en9-ZL-U2B" userLabel="Row04">
+                            <rect key="frame" x="0.0" y="408.99999999999994" width="353" height="102.33333333333331"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHa-33-qNb" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="102.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="0">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchDigit:" destination="-1" eventType="touchUpInside" id="1gy-iL-CLW"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDA-vT-nhP" userLabel="." customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="176.66666666666666" y="0.0" width="87.999999999999972" height="102.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title=".">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchDigit:" destination="-1" eventType="touchUpInside" id="e49-FJ-wse"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxo-8h-iUn" userLabel="=" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                                    <rect key="frame" x="264.66666666666669" y="0.0" width="88.333333333333314" height="102.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="=">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                                            <color key="value" systemColor="systemOrangeColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="touchOperator:" destination="-1" eventType="touchUpInside" id="vfn-e5-GdW"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="bxo-8h-iUn" firstAttribute="width" secondItem="en9-ZL-U2B" secondAttribute="width" multiplier="0.25" id="84o-Le-gBt"/>
+                                <constraint firstItem="gDA-vT-nhP" firstAttribute="centerY" secondItem="en9-ZL-U2B" secondAttribute="centerY" id="F72-wR-Gh5"/>
+                                <constraint firstItem="WHa-33-qNb" firstAttribute="centerY" secondItem="en9-ZL-U2B" secondAttribute="centerY" id="KmV-C1-4bu"/>
+                                <constraint firstItem="bxo-8h-iUn" firstAttribute="centerY" secondItem="en9-ZL-U2B" secondAttribute="centerY" id="Ons-Ij-qCX"/>
+                                <constraint firstItem="bxo-8h-iUn" firstAttribute="leading" secondItem="gDA-vT-nhP" secondAttribute="trailing" id="Svr-1R-TAG"/>
+                                <constraint firstItem="gDA-vT-nhP" firstAttribute="height" secondItem="en9-ZL-U2B" secondAttribute="height" id="XPa-lE-ITT"/>
+                                <constraint firstItem="gDA-vT-nhP" firstAttribute="width" secondItem="en9-ZL-U2B" secondAttribute="width" multiplier="0.25" id="fAd-E4-Exp"/>
+                                <constraint firstItem="WHa-33-qNb" firstAttribute="leading" secondItem="en9-ZL-U2B" secondAttribute="leading" id="l6m-9o-LpN"/>
+                                <constraint firstItem="gDA-vT-nhP" firstAttribute="leading" secondItem="WHa-33-qNb" secondAttribute="trailing" id="ldl-Q2-M4W"/>
+                                <constraint firstItem="WHa-33-qNb" firstAttribute="height" secondItem="en9-ZL-U2B" secondAttribute="height" id="u8v-UY-cyh"/>
+                                <constraint firstItem="bxo-8h-iUn" firstAttribute="height" secondItem="en9-ZL-U2B" secondAttribute="height" id="xdC-Qj-3en"/>
+                                <constraint firstItem="WHa-33-qNb" firstAttribute="width" secondItem="en9-ZL-U2B" secondAttribute="width" multiplier="0.5" id="ybp-bJ-cFj"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="7iS-S8-KtO" firstAttribute="top" secondItem="qtA-ml-nKb" secondAttribute="bottom" id="7KI-gt-OqI"/>
+                        <constraint firstItem="bk7-o6-s5z" firstAttribute="top" secondItem="zxs-Gm-Q18" secondAttribute="top" id="8c2-Ei-vqY"/>
+                        <constraint firstItem="7iS-S8-KtO" firstAttribute="height" secondItem="zxs-Gm-Q18" secondAttribute="height" multiplier="0.2" id="9ab-bU-png"/>
+                        <constraint firstItem="bk7-o6-s5z" firstAttribute="height" secondItem="zxs-Gm-Q18" secondAttribute="height" multiplier="0.2" id="DWu-fr-tHq"/>
+                        <constraint firstItem="en9-ZL-U2B" firstAttribute="height" secondItem="zxs-Gm-Q18" secondAttribute="height" multiplier="0.2" id="HU1-bv-T6p"/>
+                        <constraint firstItem="b7M-PC-z37" firstAttribute="top" secondItem="bk7-o6-s5z" secondAttribute="bottom" id="Hwc-Ay-wfS"/>
+                        <constraint firstAttribute="trailing" secondItem="en9-ZL-U2B" secondAttribute="trailing" id="Lch-C6-Shu"/>
+                        <constraint firstAttribute="trailing" secondItem="b7M-PC-z37" secondAttribute="trailing" id="NJY-kb-krc"/>
+                        <constraint firstItem="b7M-PC-z37" firstAttribute="height" secondItem="zxs-Gm-Q18" secondAttribute="height" multiplier="0.2" id="OaB-9M-DEV"/>
+                        <constraint firstItem="qtA-ml-nKb" firstAttribute="leading" secondItem="zxs-Gm-Q18" secondAttribute="leading" id="PzR-LR-Vg2"/>
+                        <constraint firstItem="b7M-PC-z37" firstAttribute="leading" secondItem="zxs-Gm-Q18" secondAttribute="leading" id="QB9-00-xYs"/>
+                        <constraint firstItem="qtA-ml-nKb" firstAttribute="top" secondItem="b7M-PC-z37" secondAttribute="bottom" id="Qox-qS-bct"/>
+                        <constraint firstItem="bk7-o6-s5z" firstAttribute="leading" secondItem="zxs-Gm-Q18" secondAttribute="leading" id="WGR-3T-3Ph"/>
+                        <constraint firstItem="qtA-ml-nKb" firstAttribute="height" secondItem="zxs-Gm-Q18" secondAttribute="height" multiplier="0.2" id="Zbo-Ws-zGK"/>
+                        <constraint firstAttribute="trailing" secondItem="qtA-ml-nKb" secondAttribute="trailing" id="cCQ-UW-g1e"/>
+                        <constraint firstAttribute="trailing" secondItem="bk7-o6-s5z" secondAttribute="trailing" id="gJo-V6-iwm"/>
+                        <constraint firstItem="en9-ZL-U2B" firstAttribute="top" secondItem="7iS-S8-KtO" secondAttribute="bottom" id="oVN-Ih-T9e"/>
+                        <constraint firstItem="7iS-S8-KtO" firstAttribute="leading" secondItem="zxs-Gm-Q18" secondAttribute="leading" id="qnL-FO-Je9"/>
+                        <constraint firstAttribute="trailing" secondItem="7iS-S8-KtO" secondAttribute="trailing" id="sbr-Nt-NBV"/>
+                        <constraint firstItem="en9-ZL-U2B" firstAttribute="leading" secondItem="zxs-Gm-Q18" secondAttribute="leading" id="ui7-Us-56Q"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="zxs-Gm-Q18" firstAttribute="top" secondItem="Rpd-Rq-h1U" secondAttribute="bottom" constant="10" id="8ke-bp-ql5"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n2v-Q5-3Sr" secondAttribute="trailing" constant="20" id="BOh-p9-HHu"/>
+                <constraint firstItem="zxs-Gm-Q18" firstAttribute="top" secondItem="M2q-BT-r9m" secondAttribute="bottom" id="5Sz-ri-Bzf"/>
+                <constraint firstItem="M2q-BT-r9m" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="BAP-pz-xlp"/>
                 <constraint firstItem="zxs-Gm-Q18" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="HV2-7P-DVM"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zxs-Gm-Q18" secondAttribute="bottom" constant="20" id="UZC-pw-OYg"/>
+                <constraint firstItem="zxs-Gm-Q18" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.6" id="IGg-mX-vyW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zxs-Gm-Q18" secondAttribute="bottom" id="UZC-pw-OYg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zxs-Gm-Q18" secondAttribute="trailing" constant="20" id="Xzd-U6-pIJ"/>
-                <constraint firstItem="mTB-wG-zwp" firstAttribute="top" secondItem="n2v-Q5-3Sr" secondAttribute="bottom" constant="10" id="Yzg-nU-rPm"/>
-                <constraint firstItem="Rpd-Rq-h1U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="cte-KN-l7f"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rpd-Rq-h1U" secondAttribute="trailing" constant="20" id="eko-15-cXL"/>
-                <constraint firstItem="n2v-Q5-3Sr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="nis-7g-Go5"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mTB-wG-zwp" secondAttribute="trailing" constant="20" id="rho-H9-Yfv"/>
-                <constraint firstItem="Rpd-Rq-h1U" firstAttribute="top" secondItem="mTB-wG-zwp" secondAttribute="bottom" constant="5" id="tRM-XG-PTJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="M2q-BT-r9m" secondAttribute="trailing" constant="20" id="bwz-NJ-vHC"/>
+                <constraint firstItem="M2q-BT-r9m" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="hx6-vL-O6x"/>
             </constraints>
             <point key="canvasLocation" x="113.74045801526717" y="-12.67605633802817"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

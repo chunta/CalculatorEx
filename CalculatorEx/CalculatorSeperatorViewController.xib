@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorSeperatorViewController" customModule="CalculatorEx" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="79" height="466"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02d-lh-Vnb" userLabel="ArrowLeft" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="79" height="93.333333333333329"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                            <color key="value" systemColor="systemGreenColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="image" keyPath="imageNormal" value="ArrowLeft"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="leftArrowDidTap:" destination="-1" eventType="touchUpInside" id="YeB-gY-PCb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouq-yO-ptN" userLabel="ArrowRight" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="93.333333333333314" width="79" height="93"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                            <color key="value" systemColor="systemGreenColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="image" keyPath="imageNormal" value="ArrowRight"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="rightArrowDidTap:" destination="-1" eventType="touchUpInside" id="Hy2-RT-07n"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMT-q3-goT" userLabel="Del" customClass="CalculatorButton" customModule="CalculatorEx" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="372.66666666666669" width="79" height="93.333333333333314"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="DEL">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="drawColor">
+                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="delDidTap:" destination="-1" eventType="touchUpInside" id="k7s-p1-cz2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="02d-lh-Vnb" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.2" id="5IQ-Da-WNm"/>
+                <constraint firstItem="EMT-q3-goT" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.2" id="7a7-8w-D9I"/>
+                <constraint firstAttribute="bottom" secondItem="EMT-q3-goT" secondAttribute="bottom" id="D6d-9O-lSY"/>
+                <constraint firstItem="02d-lh-Vnb" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="FCt-Je-Oh9"/>
+                <constraint firstItem="EMT-q3-goT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GaX-di-BWT"/>
+                <constraint firstItem="02d-lh-Vnb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Kdy-Dr-urE"/>
+                <constraint firstItem="ouq-yO-ptN" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.2" id="Sxy-nI-2zH"/>
+                <constraint firstItem="EMT-q3-goT" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="aYh-WS-Ql7"/>
+                <constraint firstItem="ouq-yO-ptN" firstAttribute="top" secondItem="02d-lh-Vnb" secondAttribute="bottom" id="gwX-xS-MxP"/>
+                <constraint firstItem="ouq-yO-ptN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mxO-Pj-9jG"/>
+                <constraint firstItem="ouq-yO-ptN" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="pJP-lJ-upV"/>
+                <constraint firstItem="02d-lh-Vnb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vmH-Wu-sw7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-197.70992366412213" y="-148.59154929577466"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ArrowLeft" width="512" height="512"/>
+        <image name="ArrowRight" width="512" height="512"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
