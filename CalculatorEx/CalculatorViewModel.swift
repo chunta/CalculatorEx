@@ -20,15 +20,24 @@ protocol ICalculatorViewModel {
     /// - Returns: The result of the calculations performed, if available.
     func getPerformResult() -> Double?
 
+    func cleanAllCalculation()
+
     /// Notifies the view model about an additional value from an assistant (if available).
     /// - Parameter 
     ///   - value: The value received from the assistant, if any.
-    func addAssitantValue(_ value: String?)
+    func addAssitantValue(_ value: String)
+
+    /// Closure variable representing an 'AC' completion handler.
+    var allCleanCompletionHandler: (() -> Void)? { get set }
+
+    var assistantCompletionHandler: ((String) -> Void)? { get set }
 }
 
 class CalculatorViewModel: ICalculatorViewModel {
 
-    var assistantCompletionHandler: ((String?) -> Void)?
+    var allCleanCompletionHandler: (() -> Void)?
+
+    var assistantCompletionHandler: ((String) -> Void)?
 
     private var calculatorBrain: ICalculatorBrain!
 
@@ -52,7 +61,12 @@ class CalculatorViewModel: ICalculatorViewModel {
         calculatorBrain.getPerformResult()
     }
 
-    func addAssitantValue(_ value: String?) {
+    func cleanAllCalculation() {
+        calculatorBrain.performOperation(OperationList.AllClean.rawValue)
+        allCleanCompletionHandler?()
+    }
+
+    func addAssitantValue(_ value: String) {
         assistantCompletionHandler?(value)
     }
 }

@@ -6,10 +6,6 @@ class CalculatorSeperatorViewController: UIViewController {
     var rightArrowAction: (() -> Void)?
     var delAction: (() -> Void)?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     @IBAction func leftArrowDidTap(_ sender: UIButton) {
         leftArrowAction?()
     }

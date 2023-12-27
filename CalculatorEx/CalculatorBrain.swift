@@ -38,15 +38,15 @@ class CalculatorBrain: ICalculatorBrain {
         case result
     }
 
-    private var operations: Dictionary<String, Operation> = [
-        OperationList.Plus.rawValue : .binaryOperation({ $0 + $1 }),
-        OperationList.Minus.rawValue : .binaryOperation({ $0 - $1 }),
-        OperationList.Multiply.rawValue : .binaryOperation({ $0 * $1 }),
-        OperationList.Divide.rawValue : .binaryOperation({ $0 / $1 }),
-        OperationList.Negative.rawValue : .unaryOperation({ -$0 }),
-        OperationList.Percentage.rawValue : .unaryOperation({ $0 / 100 }),
+    private var operations: [String: Operation] = [
+        OperationList.Plus.rawValue: .binaryOperation({ $0 + $1 }),
+        OperationList.Minus.rawValue: .binaryOperation({ $0 - $1 }),
+        OperationList.Multiply.rawValue: .binaryOperation({ $0 * $1 }),
+        OperationList.Divide.rawValue: .binaryOperation({ $0 / $1 }),
+        OperationList.Negative.rawValue: .unaryOperation({ -$0 }),
+        OperationList.Percentage.rawValue: .unaryOperation({ $0 / 100 }),
         OperationList.AllClean.rawValue: .constant(0),
-        OperationList.Eqaul.rawValue : .result
+        OperationList.Eqaul.rawValue: .result
     ]
 
     private struct PendingBinaryOperation {
@@ -120,4 +120,3 @@ class CalculatorBrain: ICalculatorBrain {
         accumulator
     }
 }
-

@@ -9,7 +9,7 @@ class CalculatorViewController: UIViewController {
     @IBOutlet private var mainDisplayLabel: UILabel!
 
     @IBOutlet private var inputSequenceLabel: UILabel!
-    
+
     // Digit Buttons
     @IBOutlet private var zeroButton: UIButton!
 
@@ -77,6 +77,7 @@ class CalculatorViewController: UIViewController {
         super.viewDidLoad()
         setUpDigitButtonTitles()
         setUpOperatorButtonTitles()
+        setUpViewModelEvent()
     }
 
     // MARK: - Set Up
@@ -103,6 +104,17 @@ class CalculatorViewController: UIViewController {
         equalButton.setTitle(OperationList.Eqaul.rawValue, for: .normal)
         negativeButton.setTitle(OperationList.Negative.rawValue, for: .normal)
         allCleanButton.setTitle(OperationList.AllClean.rawValue, for: .normal)
+    }
+
+    private func setUpViewModelEvent() {
+        viewModel.allCleanCompletionHandler = { [weak self] in
+            guard let self else { return }
+            self.mainDisplayLabel.text = ""
+            self.inputSequenceLabel.text = ""
+        }
+        viewModel.assistantCompletionHandler = { [weak self] result in
+            self?.assistantLabel.text = result.removeAfterPointIfZero()
+        }
     }
 
     // MARK: - Event
@@ -137,13 +149,11 @@ class CalculatorViewController: UIViewController {
     // Operator
     @IBAction func touchOperator(_ sender: UIButton) {
         if userIsInTheMiddleOfTyping {
-            print("setOperan \(displayValue)")
             viewModel.setOperand(displayValue)
             userIsInTheMiddleOfTyping = false
         }
 
         if let mathematicalSymbol = sender.currentTitle {
-            print("perform operation \(mathematicalSymbol)")
             viewModel.performOperation(mathematicalSymbol)
         }
 

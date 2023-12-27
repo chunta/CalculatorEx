@@ -144,6 +144,22 @@ class MainViewController: UIViewController {
     }
 
     private func setUpSeperatorEvent() {
-    
+        seperator.delAction = { [weak self] in
+            guard let self else { return }
+            self.leftViewModel.cleanAllCalculation()
+            self.rightViewModel.cleanAllCalculation()
+        }
+        seperator.leftArrowAction = { [weak self] in
+            guard let self else { return }
+            if let result = self.rightViewModel.getPerformResult() {
+                self.leftViewModel.addAssitantValue("\(result)")
+            }
+        }
+        seperator.rightArrowAction = { [weak self] in
+            guard let self else { return }
+            if let result = self.leftViewModel.getPerformResult() {
+                self.rightViewModel.addAssitantValue("\(result)")
+            }
+        }
     }
 }
