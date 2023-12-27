@@ -1,7 +1,17 @@
 import UIKit
 import SnapKit
 
-class MainViewController: UIViewController {
+/// A factory responsible for creating the main calculator view controller.
+struct CalculatorFactory {
+    /// Creates and returns the main calculator view controller.
+    /// - Returns: An instance of `UIViewController` representing the main calculator interface.
+    static func createView() -> UIViewController {
+        CalculatorMainViewController()
+    }
+}
+
+/// A view controller managing two instances of `CalculatorViewController` and a separator view between them for a dual calculator layout.
+class CalculatorMainViewController: UIViewController {
 
     private var containerView: UIView!
 
@@ -50,8 +60,6 @@ class MainViewController: UIViewController {
     private func setUpContentViews() {
         containerView = UIView()
         containerView.backgroundColor = .black
-        containerView.layer.borderWidth = 1
-        containerView.layer.borderColor = UIColor.orange.cgColor
         view.addSubview(containerView)
     }
 
@@ -67,18 +75,12 @@ class MainViewController: UIViewController {
     private func setUpCalculationViews() {
         leftCalculator = CalculatorViewController(viewModel: leftViewModel)
         containerView.addSubview(leftCalculator.view)
-        leftCalculator.view.layer.borderWidth = 1
-        leftCalculator.view.layer.borderColor = UIColor.red.cgColor
 
         seperator = CalculatorSeperatorViewController()
         containerView.addSubview(seperator.view)
-        seperator.view.layer.borderWidth = 1
-        seperator.view.layer.borderColor = UIColor.yellow.cgColor
 
         rightCalculator = CalculatorViewController(viewModel: rightViewModel)
         containerView.addSubview(rightCalculator.view)
-        rightCalculator.view.layer.borderWidth = 1
-        rightCalculator.view.layer.borderColor = UIColor.red.cgColor
     }
 
     private func setUpCalculatorViewsLayout() {

@@ -8,47 +8,13 @@ class CalculatorViewController: UIViewController {
 
     @IBOutlet private var mainDisplayLabel: UILabel!
 
-    @IBOutlet private var inputSequenceLabel: UILabel!
+    @IBOutlet private var sequenceLabel: UILabel!
 
     // Digit Buttons
-    @IBOutlet private var zeroButton: UIButton!
-
-    @IBOutlet private var oneButton: UIButton!
-
-    @IBOutlet private var twoButton: UIButton!
-
-    @IBOutlet private var threeButton: UIButton!
-
-    @IBOutlet private var fourButton: UIButton!
-
-    @IBOutlet private var fiveButton: UIButton!
-
-    @IBOutlet private var sixButton: UIButton!
-
-    @IBOutlet private var sevenButton: UIButton!
-
-    @IBOutlet private var eightButton: UIButton!
-
-    @IBOutlet private var nineButton: UIButton!
-
-    @IBOutlet private var dotButton: UIButton!
+    @IBOutlet private var digitButtons: [UIButton]!
 
     // Operator Buttons
-    @IBOutlet private var multiplyButton: UIButton!
-
-    @IBOutlet private var divideButton: UIButton!
-
-    @IBOutlet private var minusButton: UIButton!
-
-    @IBOutlet private var plusButton: UIButton!
-
-    @IBOutlet private var percentageButton: UIButton!
-
-    @IBOutlet private var equalButton: UIButton!
-
-    @IBOutlet private var negativeButton: UIButton!
-
-    @IBOutlet private var allCleanButton: UIButton!
+    @IBOutlet private var operatorButtons: [UIButton]!
 
     private var viewModel: ICalculatorViewModel
 
@@ -60,7 +26,7 @@ class CalculatorViewController: UIViewController {
         }
         set {
             let tmp = String(newValue).removeAfterPointIfZero()
-            mainDisplayLabel.text = tmp.setMaxLength(of: 8)
+            mainDisplayLabel.text = tmp.setMaxLength(of: Constants.maxResultDisplayLength)
         }
     }
 
@@ -75,42 +41,47 @@ class CalculatorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpDigitButtonTitles()
-        setUpOperatorButtonTitles()
+        setUpButtonTitles()
         setUpViewModelEvent()
     }
 
     // MARK: - Set Up
-    private func setUpDigitButtonTitles() {
-        zeroButton.setTitle(DigitList.Zero.rawValue, for: .normal)
-        oneButton.setTitle(DigitList.One.rawValue, for: .normal)
-        twoButton.setTitle(DigitList.Two.rawValue, for: .normal)
-        threeButton.setTitle(DigitList.Three.rawValue, for: .normal)
-        fourButton.setTitle(DigitList.Four.rawValue, for: .normal)
-        fiveButton.setTitle(DigitList.Five.rawValue, for: .normal)
-        sixButton.setTitle(DigitList.Six.rawValue, for: .normal)
-        sevenButton.setTitle(DigitList.Seven.rawValue, for: .normal)
-        eightButton.setTitle(DigitList.Eight.rawValue, for: .normal)
-        nineButton.setTitle(DigitList.Nine.rawValue, for: .normal)
-        dotButton.setTitle(DigitList.Dot.rawValue, for: .normal)
+    private func setUpButtonTitles() {
+        setButtonTitles(for: digitButtons,
+                        with: [DigitSymbol.Zero.rawValue,
+                               DigitSymbol.One.rawValue,
+                               DigitSymbol.Two.rawValue,
+                               DigitSymbol.Three.rawValue,
+                               DigitSymbol.Four.rawValue,
+                               DigitSymbol.Five.rawValue,
+                               DigitSymbol.Six.rawValue,
+                               DigitSymbol.Seven.rawValue,
+                               DigitSymbol.Eight.rawValue,
+                               DigitSymbol.Nine.rawValue,
+                               DigitSymbol.Dot.rawValue])
+        setButtonTitles(for: operatorButtons,
+                        with: [OperatorSymbol.Multiply.rawValue,
+                               OperatorSymbol.Divide.rawValue,
+                               OperatorSymbol.Minus.rawValue,
+                               OperatorSymbol.Plus.rawValue,
+                               OperatorSymbol.Percentage.rawValue,
+                               OperatorSymbol.Eqaul.rawValue,
+                               OperatorSymbol.Negative.rawValue,
+                               OperatorSymbol.AllClean.rawValue])
     }
 
-    private func setUpOperatorButtonTitles() {
-        multiplyButton.setTitle(OperationList.Multiply.rawValue, for: .normal)
-        divideButton.setTitle(OperationList.Divide.rawValue, for: .normal)
-        minusButton.setTitle(OperationList.Minus.rawValue, for: .normal)
-        plusButton.setTitle(OperationList.Plus.rawValue, for: .normal)
-        percentageButton.setTitle(OperationList.Percentage.rawValue, for: .normal)
-        equalButton.setTitle(OperationList.Eqaul.rawValue, for: .normal)
-        negativeButton.setTitle(OperationList.Negative.rawValue, for: .normal)
-        allCleanButton.setTitle(OperationList.AllClean.rawValue, for: .normal)
+    private func setButtonTitles(for buttons: [UIButton], with titles: [String]) {
+        for (index, button) in buttons.enumerated() {
+            button.setTitle(titles[index], for: .normal)
+        }
     }
 
     private func setUpViewModelEvent() {
         viewModel.allCleanCompletionHandler = { [weak self] in
             guard let self else { return }
             self.mainDisplayLabel.text = ""
-            self.inputSequenceLabel.text = ""
+            self.sequenceLabel.text = ""
+            self.assistantLabel.text = ""
         }
         viewModel.assistantCompletionHandler = { [weak self] result in
             self?.assistantLabel.text = result.removeAfterPointIfZero()
@@ -128,11 +99,11 @@ class CalculatorViewController: UIViewController {
         if userIsInTheMiddleOfTyping {
             guard let textCurrentlyInDisplay = mainDisplayLabel.text else { return }
 
-            if digit == DigitList.Dot.rawValue && (textCurrentlyInDisplay.range(of: Constants.decimalPoint) != nil) {
+            if digit == DigitSymbol.Dot.rawValue && (textCurrentlyInDisplay.range(of: Constants.decimalPoint) != nil) {
                 return
             } else {
                 let tmp = textCurrentlyInDisplay + digit
-                mainDisplayLabel.text = tmp.setMaxLength(of: Constants.maxStringLength)
+                mainDisplayLabel.text = tmp.setMaxLength(of: Constants.maxResultDisplayLength)
             }
         } else {
             if digit == Constants.decimalPoint {
@@ -143,7 +114,7 @@ class CalculatorViewController: UIViewController {
             userIsInTheMiddleOfTyping = true
         }
 
-        inputSequenceLabel.text = viewModel.sequenceExpress()
+        sequenceLabel.text = viewModel.sequenceExpress()
     }
 
     // Operator
@@ -153,14 +124,14 @@ class CalculatorViewController: UIViewController {
             userIsInTheMiddleOfTyping = false
         }
 
-        if let mathematicalSymbol = sender.currentTitle {
-            viewModel.performOperation(mathematicalSymbol)
+        if let mathematicalSymbol = sender.currentTitle,
+           let symbol = OperatorSymbol(rawValue: mathematicalSymbol) {
+            viewModel.performOperation(symbol)
         }
 
         if let result = viewModel.getPerformResult() {
             displayValue = result
         }
-
-        inputSequenceLabel.text = viewModel.sequenceExpress()
+        sequenceLabel.text = viewModel.sequenceExpress()
     }
 }

@@ -1,11 +1,11 @@
 import Foundation
 
 /// Protocol defining the interface for a calculator view model.
-protocol ICalculatorViewModel {
+protocol ICalculatorViewModel: AnyObject {
     /// Performs a mathematical operation based on the provided symbol.
     /// - Parameter 
     ///   - symbol: The symbol representing the mathematical operation (e.g., "+", "-", "*", "/", etc.).
-    func performOperation(_ symbol: String)
+    func performOperation(_ symbol: OperatorSymbol)
 
     /// Sets the operand (numeric value) for calculations.
     /// - Parameter 
@@ -45,8 +45,8 @@ class CalculatorViewModel: ICalculatorViewModel {
         self.calculatorBrain = calculatorBrain
     }
 
-    func performOperation(_ symbol: String) {
-        calculatorBrain.performOperation(symbol)
+    func performOperation(_ symbol: OperatorSymbol) {
+        calculatorBrain.performOperation(symbol.rawValue)
     }
 
     func setOperand(_ operand: Double?) {
@@ -62,7 +62,7 @@ class CalculatorViewModel: ICalculatorViewModel {
     }
 
     func cleanAllCalculation() {
-        calculatorBrain.performOperation(OperationList.AllClean.rawValue)
+        calculatorBrain.performOperation(OperatorSymbol.AllClean.rawValue)
         allCleanCompletionHandler?()
     }
 

@@ -1,17 +1,20 @@
 import UIKit
 
+/// A custom subclass of UIButton providing a stylized calculator button appearance.
 class CalculatorButton: UIButton {
 
+    /// The corner radius of the button.
     @IBInspectable var cornerRadius: CGFloat = 8.0
 
+    /// The color used to fill the button.
     @IBInspectable var drawColor: UIColor = UIColor.black
 
+    /// The image displayed in the button for the normal state.
     @IBInspectable var imageNormal: UIImage?
 
-    private var insets: UIEdgeInsets = UIEdgeInsets(top: 4,
-                                                    left: 4,
-                                                    bottom: 4,
-                                                    right: 4)
+    /// The insets for the button's content.
+    private var insets: UIEdgeInsets = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
+
     override func layoutSubviews() {
         super.layoutSubviews()
         if let image = imageNormal {

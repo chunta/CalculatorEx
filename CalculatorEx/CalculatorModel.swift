@@ -1,6 +1,6 @@
 import Foundation
 
-enum OperationList: String {
+enum OperatorSymbol: String {
     case Plus = "＋"
     case Minus = "﹣"
     case Multiply = "×"
@@ -11,7 +11,7 @@ enum OperationList: String {
     case Percentage = "﹪"
 }
 
-enum DigitList: String {
+enum DigitSymbol: String {
     case One = "1"
     case Two = "2"
     case Three = "3"
@@ -28,6 +28,6 @@ enum DigitList: String {
 struct Constants {
     static let decimalPoint: String = "."
     static let emptyString: String = ""
-    static let maxStringLength: Int = 8
+    static let maxResultDisplayLength: Int = 20
     static let pointAfterZero: String = "0."
 }

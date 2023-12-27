@@ -1,5 +1,6 @@
 import UIKit
 
+/// A view controller managing the separator view between two calculators, providing actions for navigation and deletion.
 class CalculatorSeperatorViewController: UIViewController {
 
     var leftArrowAction: (() -> Void)?

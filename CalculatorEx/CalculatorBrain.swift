@@ -1,7 +1,7 @@
 import Foundation
 
 /// Protocol representing the functionality of a calculator.
-protocol ICalculatorBrain {
+protocol ICalculatorBrain: AnyObject {
     /// Performs a mathematical operation based on the provided symbol.
     /// - Parameters
     ///   - symbol: The symbol representing the mathematical operation (e.g., "+", "-", "*", "/", etc.).
@@ -39,14 +39,14 @@ class CalculatorBrain: ICalculatorBrain {
     }
 
     private var operations: [String: Operation] = [
-        OperationList.Plus.rawValue: .binaryOperation({ $0 + $1 }),
-        OperationList.Minus.rawValue: .binaryOperation({ $0 - $1 }),
-        OperationList.Multiply.rawValue: .binaryOperation({ $0 * $1 }),
-        OperationList.Divide.rawValue: .binaryOperation({ $0 / $1 }),
-        OperationList.Negative.rawValue: .unaryOperation({ -$0 }),
-        OperationList.Percentage.rawValue: .unaryOperation({ $0 / 100 }),
-        OperationList.AllClean.rawValue: .constant(0),
-        OperationList.Eqaul.rawValue: .result
+        OperatorSymbol.Plus.rawValue: .binaryOperation({ $0 + $1 }),
+        OperatorSymbol.Minus.rawValue: .binaryOperation({ $0 - $1 }),
+        OperatorSymbol.Multiply.rawValue: .binaryOperation({ $0 * $1 }),
+        OperatorSymbol.Divide.rawValue: .binaryOperation({ $0 / $1 }),
+        OperatorSymbol.Negative.rawValue: .unaryOperation({ -$0 }),
+        OperatorSymbol.Percentage.rawValue: .unaryOperation({ $0 / 100 }),
+        OperatorSymbol.AllClean.rawValue: .constant(0),
+        OperatorSymbol.Eqaul.rawValue: .result
     ]
 
     private struct PendingBinaryOperation {

@@ -11,29 +11,29 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorViewController" customModule="CalculatorEx" customModuleProvider="target">
             <connections>
-                <outlet property="allCleanButton" destination="9nM-F9-kgY" id="UCj-ic-eYL"/>
                 <outlet property="assistantLabel" destination="T0R-MO-boH" id="s7R-qQ-aMU"/>
-                <outlet property="divideButton" destination="aEX-E4-hT5" id="TgH-JN-Zkj"/>
-                <outlet property="dotButton" destination="gDA-vT-nhP" id="PS3-jl-GlY"/>
-                <outlet property="eightButton" destination="VCF-6I-Nbm" id="yrS-AW-iNz"/>
-                <outlet property="equalButton" destination="bxo-8h-iUn" id="Mra-Fb-veO"/>
-                <outlet property="fiveButton" destination="73p-K4-rOT" id="6q6-Vy-yu1"/>
-                <outlet property="fourButton" destination="pRf-m4-CYf" id="c6q-lM-o0T"/>
-                <outlet property="inputSequenceLabel" destination="NZx-jy-oXG" id="3HK-Oy-VmZ"/>
                 <outlet property="mainDisplayLabel" destination="iXT-nr-4hN" id="U36-6c-1EQ"/>
-                <outlet property="minusButton" destination="oMO-7B-aWA" id="Ta3-pn-Fcr"/>
-                <outlet property="multiplyButton" destination="EoA-rb-RPK" id="zUC-LX-Bvf"/>
-                <outlet property="negativeButton" destination="xjE-nr-bcH" id="1zo-nQ-0A3"/>
-                <outlet property="nineButton" destination="olI-d7-627" id="UxG-dc-DKh"/>
-                <outlet property="oneButton" destination="cDD-Ou-PWz" id="2HC-IP-3nT"/>
-                <outlet property="percentageButton" destination="ANr-g7-7ES" id="Ok2-dX-CQm"/>
-                <outlet property="plusButton" destination="Hes-g9-saI" id="o4o-8F-94a"/>
-                <outlet property="sevenButton" destination="Ew5-h0-Lsh" id="NGl-I2-KWx"/>
-                <outlet property="sixButton" destination="f9h-az-KLF" id="8aR-ok-reM"/>
-                <outlet property="threeButton" destination="bPL-8k-Jwa" id="dp0-LR-m39"/>
-                <outlet property="twoButton" destination="eIo-pX-gKH" id="f8s-cb-OmU"/>
+                <outlet property="sequenceLabel" destination="NZx-jy-oXG" id="3HK-Oy-VmZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="zeroButton" destination="WHa-33-qNb" id="Txs-WS-WTv"/>
+                <outletCollection property="digitButtons" destination="WHa-33-qNb" collectionClass="NSMutableArray" id="ZQ1-hH-49y"/>
+                <outletCollection property="digitButtons" destination="cDD-Ou-PWz" collectionClass="NSMutableArray" id="Ygo-Pm-gXX"/>
+                <outletCollection property="digitButtons" destination="eIo-pX-gKH" collectionClass="NSMutableArray" id="tVC-Tf-W0I"/>
+                <outletCollection property="digitButtons" destination="bPL-8k-Jwa" collectionClass="NSMutableArray" id="1Wi-Ne-iND"/>
+                <outletCollection property="digitButtons" destination="pRf-m4-CYf" collectionClass="NSMutableArray" id="4io-GG-nfg"/>
+                <outletCollection property="digitButtons" destination="73p-K4-rOT" collectionClass="NSMutableArray" id="nP2-BI-Zmn"/>
+                <outletCollection property="digitButtons" destination="f9h-az-KLF" collectionClass="NSMutableArray" id="gpO-iV-fMz"/>
+                <outletCollection property="digitButtons" destination="Ew5-h0-Lsh" collectionClass="NSMutableArray" id="7uT-8J-3Cl"/>
+                <outletCollection property="digitButtons" destination="VCF-6I-Nbm" collectionClass="NSMutableArray" id="yhV-kp-EuV"/>
+                <outletCollection property="digitButtons" destination="olI-d7-627" collectionClass="NSMutableArray" id="pBb-1l-Xpd"/>
+                <outletCollection property="digitButtons" destination="gDA-vT-nhP" collectionClass="NSMutableArray" id="yxH-PH-8h9"/>
+                <outletCollection property="operatorButtons" destination="EoA-rb-RPK" collectionClass="NSMutableArray" id="Hla-ON-fG4"/>
+                <outletCollection property="operatorButtons" destination="aEX-E4-hT5" collectionClass="NSMutableArray" id="gyc-TK-tDd"/>
+                <outletCollection property="operatorButtons" destination="oMO-7B-aWA" collectionClass="NSMutableArray" id="KTf-FE-YbC"/>
+                <outletCollection property="operatorButtons" destination="Hes-g9-saI" collectionClass="NSMutableArray" id="yWq-cr-Vi8"/>
+                <outletCollection property="operatorButtons" destination="ANr-g7-7ES" collectionClass="NSMutableArray" id="cgN-Kh-uRI"/>
+                <outletCollection property="operatorButtons" destination="bxo-8h-iUn" collectionClass="NSMutableArray" id="Ehf-nW-XyL"/>
+                <outletCollection property="operatorButtons" destination="xjE-nr-bcH" collectionClass="NSMutableArray" id="Ds9-UD-wQg"/>
+                <outletCollection property="operatorButtons" destination="9nM-F9-kgY" collectionClass="NSMutableArray" id="lXh-PF-8Yi"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -563,7 +563,7 @@
     </objects>
     <resources>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
